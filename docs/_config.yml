@@ -30,7 +30,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 github_username:  abotw
 
 domain: abotw.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://abotw.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+url: https://abotw.github.io/docs  # the base hostname and protocol for your site, e.g. http://example.com
 baseurl: /docs/      # place folder name if the site is served in a subfolder
 
 # Build settings
