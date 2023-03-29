@@ -314,3 +314,25 @@ h3 {
         0.28em 0.28em #8f00ff;
     }
   }
+
+  /* key */
+
+.key {
+    margin: 0 10px;
+    position: relative;
+}
+
+.key:first-child {
+    margin-left: 0;
+}
+
+.key::before {
+    content: '◆';
+    position: absolute;
+    left: -15px;
+    color: #555;
+    font-size: 7pt;
+}
+.key:first-child::before {
+    content: ''
+}
