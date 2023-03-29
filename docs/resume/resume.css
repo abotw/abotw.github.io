@@ -1,0 +1,316 @@
+body {
+    /* background: lightgrey; */
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+#page {
+    width: 1000px;
+    min-height: 29.7cm;
+    margin: 1cm auto;
+    background: white;
+    padding: 20px 50px;
+    border-radius: 8px;
+    /* https://getcssscan.com/css-box-shadow-examples */
+    /* box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; */
+    /* box-shadow: rgba(11, 0, 170, 0.4) -5px 5px, rgba(11, 0, 170, 0.3) -10px 10px, rgba(11, 0, 170, 0.2) -15px 15px, rgba(11, 0, 170, 0.1) -20px 20px, rgba(11, 0, 170, 0.05) -25px 25px; */
+    /* box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px; */
+}
+
+ul {
+    padding-left: 15px;
+    
+}
+
+ul.skills {
+    float: left;
+    width: 30%;
+    padding-left: 0px;
+    margin: 0 20px 0 0;
+}
+
+ul.skills li {
+    list-style: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+ul.skills li:hover {
+    font-family: Rancho;
+    font-size: 30px;
+    -webkit-animation:rainbow 3s linear infinite;
+}
+
+ul li {
+    clear: both;
+}
+
+/* 
+ Link
+*/
+
+a {
+    color: #ba0018;
+    display: inline-block;
+    text-decoration: none;
+    padding: 2px 4px;
+    border-radius: 2px;
+    margin-right: -2px;
+}
+
+a:hover {
+    background: #ba0018;
+    color: white;
+}
+
+/* 
+ Float Rules
+*/
+
+.col {
+    float: left;
+}
+
+.col-right {
+    float: right;
+}
+
+.row:before, .row:after {
+    content: "";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+/* 
+ Header
+*/
+
+h1, h2, h3 {
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ba0018;
+}
+
+h2, h3 {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 300;
+    margin: 5px 0 0;
+    padding: 0 10px 10px;
+    border-radius: 2px;
+}
+
+h2 {
+    width: 150px;
+    padding: 12px 0 0 20px;
+}
+
+h3 {
+    color: #000;
+    margin-bottom: 0;
+    line-height: 28px;
+}
+
+/* 
+ Section
+*/
+
+.contact-info {
+    font-size: 16px;
+    text-align: right;
+    margin-left: 500px;
+}
+
+.section {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0 15px;
+}
+
+.section:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* border-bottom: 1px solid #fff; */
+}
+
+.section:first-child:hover {
+    box-shadow: #fff 0px 0px 0px 0px;
+}
+
+.section:last-child {
+    border: none;
+}
+
+.section-text {
+    width: 80%;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 15px 0 10px;
+    padding: 0 10px;
+}
+
+.light {
+    color: #aaa;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 28px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+}
+
+.subsection {
+    margin: 10px 0 5px;
+}
+
+.desc {
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #444;
+}
+
+.emph {
+    color: #ba0018;
+    border-radius: 2px;
+    padding: 2px 4px;
+    letter-spacing: 1px;
+}
+
+/* Codes */
+.codes {
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+    font-family: monospace;
+    display: flex;
+    height: 20px;
+    padding: 2px 0;
+}
+
+.codeline {
+    margin: 2px 0;
+    border-bottom: 2px dashed #000;
+}
+
+.codes p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: bold;
+}
+
+.code-left {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+}
+
+.code-right {
+}
+
+/* avartar */
+
+.avartar img {
+    width: 120px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    border: 1px solid #ddd;
+    padding: 1px;
+}
+
+.avartar img:hover {
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}
+
+@-webkit-keyframes rainbow {
+    from {
+      text-shadow:
+        0.04em 0.04em #ff0000,
+        0.08em 0.08em #ff7f00,
+        0.12em 0.12em #ffff00,
+        0.16em 0.16em #00ff00,
+        0.20em 0.20em #0000ff,
+        0.24em 0.24em #4b0082,
+        0.28em 0.28em #8f00ff;
+    }
+    15% {
+      text-shadow:
+        0.04em 0.04em #8f00ff,
+        0.08em 0.08em #ff0000,
+        0.12em 0.12em #ff7f00,
+        0.16em 0.16em #ffff00,
+        0.20em 0.20em #00ff00,
+        0.24em 0.24em #0000ff,
+        0.28em 0.28em #4b0082;
+    }
+    30% {
+      text-shadow:
+        0.04em 0.04em #4b0082,
+        0.08em 0.08em #8f00ff,
+        0.12em 0.12em #ff0000,
+        0.16em 0.16em #ff7f00,
+        0.20em 0.20em #ffff00,
+        0.24em 0.24em #00ff00,
+        0.28em 0.28em #0000ff;
+    }
+    45% {
+      text-shadow:
+        0.04em 0.04em #0000ff,
+        0.08em 0.08em #4b0082,
+        0.12em 0.12em #8f00ff,
+        0.16em 0.16em #ff0000,
+        0.20em 0.20em #ff7f00,
+        0.24em 0.24em #ffff00,
+        0.28em 0.28em #00ff00;
+    }
+    60% {
+      text-shadow:
+        0.04em 0.04em #00ff00,
+        0.08em 0.08em #0000ff,
+        0.12em 0.12em #4b0082,
+        0.16em 0.16em #8f00ff,
+        0.20em 0.20em #ff0000,
+        0.24em 0.24em #ff7f00,
+        0.28em 0.28em #ffff00;
+    }
+    75% {
+      text-shadow:
+        0.04em 0.04em #ffff00,
+        0.08em 0.08em #00ff00,
+        0.12em 0.12em #0000ff,
+        0.16em 0.16em #4b0082,
+        0.20em 0.20em #8f00ff,
+        0.24em 0.24em #ff0000,
+        0.28em 0.28em #ff7f00;
+    }
+    90% {
+      text-shadow:
+        0.04em 0.04em #ff7f00,
+        0.08em 0.08em #ffff00,
+        0.12em 0.12em #00ff00,
+        0.16em 0.16em #0000ff,
+        0.20em 0.20em #4b0082,
+        0.24em 0.24em #8f00ff,
+        0.28em 0.28em #ff0000;
+    }
+    to {
+      text-shadow:
+        0.04em 0.04em #ff0000,
+        0.08em 0.08em #ff7f00,
+        0.12em 0.12em #ffff00,
+        0.16em 0.16em #00ff00,
+        0.20em 0.20em #0000ff,
+        0.24em 0.24em #4b0082,
+        0.28em 0.28em #8f00ff;
+    }
+  }
