@@ -100,6 +100,33 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
     </Section> */
       }
 
+      <Section title='Education'>
+        <Card
+          as='a'
+          heading='合肥大学'
+          subheading='计算机科学技术'
+          date='September 2024 - Present'
+          href='https://www.hfuu.edu.cn/'
+        >
+          <img
+            class='absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-40'
+            src='/images/HFU.jpg'
+          />
+        </Card>
+        <Card
+          as='a'
+          heading='芜湖职业技术大学'
+          subheading='软件技术'
+          date='September 2021 - July 2024'
+          href='https://www.whit.edu.cn/'
+        >
+          <img
+            class='absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-40'
+            src='/images/WHIT.png'
+          />
+        </Card>
+      </Section>
+
       <Section title='Skills'>
         <SkillLayout title='Web' skills={web} />
         <SkillLayout title='Languages' skills={languages} />
