@@ -5,13 +5,110 @@ import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 
 const headings = [
-  { depth: 2, slug: 'hobbies', text: 'Hobbies' },
   { depth: 2, slug: 'tools', text: 'Tools' },
   { depth: 2, slug: 'social-networks', text: 'Social Networks' },
-  { depth: 2, slug: 'gossips', text: 'Gossips' },
   { depth: 2, slug: 'about-blog', text: 'About Blog' }
 ]
 ---
 
-<PageLayout title='About' {headings}>
+<PageLayout title='About' {headings} comment>
+  <h2 id='general-talk' class='invisible m-0 h-0'>General Talk</h2>
+  <p>你好，我是 Abotw。目前就读于合肥大学人工智能与大数据学院，主修计算机科学与技术。</p>
+  <p>热爱思考，喜欢自然，对这个世界还有很多的好奇的疑问。</p>
+
+  {/* tools */}
+  <h2 id='tools'>Tools</h2>
+  <p>以下是我正在使用的一些工具：</p>
+  <ToolSection
+    class='mb-5'
+    title='Productivity'
+    tools={[
+      {
+        name: 'Typora',
+        description: 'Markdown Editor',
+        href: 'https://typora.io/',
+        icon: import('@/assets/tools/typora.svg?raw')
+      },
+      {
+        name: 'Zotero',
+        description: 'Reference Management',
+        href: 'https://www.zotero.org/',
+        icon: zotero
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Development'
+    tools={[
+      {
+        name: 'VS Code',
+        description: 'IDE',
+        href: 'https://code.visualstudio.com/',
+        icon: import('@/assets/tools/vscode.svg?raw')
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Environment'
+    tools={[
+      {
+        name: 'macOS Tahoe 26.1',
+        description: "MacBook Pro 14', Nov 2024",
+        href: 'https://www.apple.com/macos/',
+        icon: import('@/assets/tools/apple.svg?raw')
+      }
+    ]}
+  />
+
+  {/* social-networks */}
+  <h2 id='social-networks'>Social Networks</h2>
+  <p>你可以在以下平台找到我：</p>
+  <Substats
+    stats={[
+      {
+        platform: 'GitHub',
+        icon: 'github',
+        link: 'https://github.com/zhuozhiyongde',
+        text: 'followers',
+        api: 'github/abotw'
+      },
+      {
+        platform: 'Bilibili',
+        icon: 'bilibili',
+        color: '#fe7398',
+        link: 'https://space.bilibili.com/3031522',
+        text: 'followers',
+        count: 36
+      }
+    ]}
+  />
+
+  <h2 id='education'>Education</h2>
+  <Timeline
+    events={[
+      {
+        date: '2024-09-01',
+        content: '<a href="https://www.hfuu.edu.cn/"target="_blank">合肥大学</a>'
+      },
+      {
+        date: '2021-09-01',
+        content: '<a href="https://www.whit.edu.cn/"target="_blank">芜湖职业技术大学</a>'
+      }
+    ]}
+  />
+
+  {/* about-blog */}
+  <h2 id='about-blog'>About Blog</h2>
+  <p>本站基于以下项目/服务提供商的资源和技术支持：</p>
+  <ul>
+    <li>托管: <a href='https://pages.github.com/' target='_blank'>Github Pages</a></li>
+    <li>
+      框架 & 主题: <a href='https://astro.build/' target='_blank'>Astro</a> + <a
+        href='https://github.com/cworld1/astro-theme-pure'
+        target='_blank'>Astro Theme Pure</a
+      >
+    </li>
+  </ul>
 </PageLayout>
