@@ -4,6 +4,27 @@ import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 
+import RPiIcon from '@/assets/tools/rpi.png';
+import SwitchIcon from '@/assets/tools/switch.png';
+import KoboIcon from '@/assets/tools/kobo.png';
+import AnkiIcon from '@/assets/tools/anki.png';
+import ZoteroIcon from '@/assets/tools/zotero.png';
+import EndNoteIcon from '@/assets/tools/endnote.jpeg';
+import ZSpaceIcon from '@/assets/tools/zspace.webp';
+import SpotifyIcon from '@/assets/tools/spotify.png';
+import AppleMusicIcon from '@/assets/tools/applemusic.png';
+import ITerm2Icon from '@/assets/tools/iterm2.png';
+import SkimIcon from '@/assets/tools/skim.png';
+import EudicIcon from '@/assets/tools/eudic.png';
+import MarginNoteIcon from '@/assets/tools/marginnote.png';
+import VimIcon from '@/assets/tools/vim.gif';
+import CotEditorIcon from '@/assets/tools/coteditor.png';
+import AppleNotesIcon from '@/assets/tools/applenotes.png';
+import AlfredIcon from '@/assets/tools/alfred.png';
+import AirPods4Icon from '@/assets/tools/airpods4.png';
+import WH1000XM3Icon from '@/assets/tools/wh-1000xm3.avif';
+import HomePodIcon from '@/assets/tools/homepod.png';
+
 const headings = [
   { depth: 2, slug: 'tools', text: 'Tools' },
   { depth: 2, slug: 'social-networks', text: 'Social Networks' },
@@ -12,67 +33,235 @@ const headings = [
 ---
 
 <PageLayout title='About' {headings}>
-  <h2 id='general-talk' class='invisible m-0 h-0'>General Talk</h2>
-  <p>你好，我是 Abotw。目前就读于合肥大学人工智能与大数据学院，主修计算机科学与技术。</p>
-  <p>喜爱自然，热爱思考，对这个世界还有很多的疑问和好奇。</p>
+    <h2 id='general-talk' class='invisible m-0 h-0'>General Talk</h2>
+    <p>你好，我是 Abotw。目前就读于合肥大学人工智能与大数据学院，主修计算机科学与技术。</p>
+    <p>喜爱自然，热爱思考，对这个世界还有很多的疑问和好奇。</p>
 
-  {/* tools */}
-  <h2 id='tools'>Tools</h2>
-  <p>以下是我正在使用的一些工具：</p>
+    {/* tools */}
+    <h2 id='tools'>Tools</h2>
+    <p>以下是我正在使用的一些工具：</p>
+
+    {/* Hardware */}
     <ToolSection
-    class='mb-5'
-    title='Hardware'
-    tools={[
-      {
-        name: "MacBook Pro (14', M4, 2024)",
-        description: "24G + 512G, purchased in Jun 2025",
-        href: 'https://support.apple.com/en-us/121552',
-        icon: import('@/assets/tools/apple.svg?raw')
-      },
-      {
-        name: 'Raspberry Pi 5 (2023)',
-        description: "8G, purchased in Nov 2023",
-        href: 'https://www.raspberrypi.com/products/raspberry-pi-5/',
-        icon: import('@/assets/icons/rpi.svg?raw')
-      },
-      {
-        name: "Surface Laptop Go 2 (12.4', 2022)",
-        description: "8G + 256G, purchased in Sep 2022",
-        href: 'https://support.microsoft.com/en-us/surface/surface-laptop-go-2-features-2eff8979-464a-442a-8848-856b2e237c11',
-        icon: import('@/assets/tools/windows11.svg?raw')
-      },
-    ]}
-  />
-  <ToolSection
-    class='mb-5'
-    title='Productivity'
-    tools={[
-      {
-        name: 'Chrome',
-        description: 'Browser',
-        href: 'https://www.google.com/intl/zh-CN/chrome/',
-        icon: import('@/assets/tools/chrome.svg?raw')
-      },
-      {
-        name: 'Typora',
-        description: 'Markdown Editor',
-        href: 'https://typora.io/',
-        icon: import('@/assets/tools/typora.svg?raw')
-      }
-    ]}
-  />
-  <ToolSection
-    class='mb-5'
-    title='Development'
-    tools={[
-      {
-        name: 'VS Code',
-        description: 'IDE',
-        href: 'https://code.visualstudio.com/',
-        icon: import('@/assets/tools/vscode.svg?raw')
-      }
-    ]}
-  />
+        class='mb-5'
+        title='Hardware'
+        tools={[
+        {
+            name: "MacBook Pro (14', M4, 2024)",
+            description: "24G + 512G, purchased in Jun 2025",
+            href: 'https://support.apple.com/en-us/121552',
+            icon: import('@/assets/tools/apple.svg?raw')
+        },
+        {
+            name: 'Raspberry Pi 5 (2023)',
+            description: "8G, purchased in Nov 2023",
+            href: 'https://www.raspberrypi.com/products/raspberry-pi-5/',
+            icon: RPiIcon
+        },
+        {
+            name: 'ZSpace Q2C (2023)',
+            description: "4T*2, purchased in Oct 2023",
+            href: 'https://www.zspace.cn/q2c/',
+            icon: ZSpaceIcon
+        },
+        {
+            name: "Surface Laptop Go 2 (12.4', 2022)",
+            description: "8G + 256G, purchased in Sep 2022",
+            href: 'https://support.microsoft.com/en-us/surface/surface-laptop-go-2-features-2eff8979-464a-442a-8848-856b2e237c11',
+            icon: import('@/assets/tools/windows11.svg?raw')
+        },
+        {
+            name: "Nintendo Switch OLED (2021)",
+            description: "Purchased in May 2022",
+            href: 'https://www.nintendo.com/ph/hardware/detail/switch-oled/index.html?modalid=mariored&srsltid=AfmBOoqPPH4zgOHUNh6FhQpG3dS40w4l7WrNM1HmS-t4BgKmS699vs1r',
+            icon: SwitchIcon
+        },
+        ]}
+    />
+
+    {/* Reading */}
+    <ToolSection
+        class='mb-5'
+        title='Reading'
+        tools={[
+            {
+                name: 'Kobo Clara 2E (2022)',
+                description: "Purchased in Jan 2023",
+                href: 'https://gl.kobobooks.com/zh/products/kobo-clara-2e',
+                icon: KoboIcon
+            },
+            {
+                name: 'Chrome',
+                description: 'Browser',
+                href: 'https://www.google.com/intl/zh-CN/chrome/',
+                icon: import('@/assets/tools/chrome.svg?raw')
+            },
+            {
+                name: 'Folo',
+                description: '',
+                href: 'https://folo.is/',
+                icon: import('@/assets/tools/folo.svg?raw')
+            },
+            {
+                name: 'Skim',
+                description: '',
+                href: 'https://skim-app.sourceforge.io/',
+                icon: SkimIcon
+            },
+            {
+                name: 'PDF Expert',
+                description: '',
+                href: 'https://pdfexpert.com/',
+                icon: import('@/assets/tools/pdfexpert.svg?raw')
+            },
+            {
+                name: 'MarginNote',
+                description: '',
+                href: 'https://marginnote.com/',
+                icon: MarginNoteIcon
+            },
+            {
+                name: 'Eudic',
+                description: '',
+                href: 'https://www.eudic.net/v4/en/app/eudic',
+                icon: EudicIcon
+            },
+        ]}
+    />
+
+    {/* Editors */}
+    <ToolSection
+        class='mb-5'
+        title='Editors'
+        tools={[
+            {
+                name: 'Vim',
+                description: '',
+                href: 'https://www.vim.org/',
+                icon: VimIcon
+            },
+            {
+                name: 'VS Code',
+                description: 'IDE',
+                href: 'https://code.visualstudio.com/',
+                icon: import('@/assets/tools/vscode.svg?raw')
+            },
+            {
+                name: 'Typora',
+                description: 'Markdown Editor',
+                href: 'https://typora.io/',
+                icon: import('@/assets/tools/typora.svg?raw')
+            },
+            {
+                name: 'CotEditor',
+                description: '',
+                href: 'https://coteditor.com/',
+                icon: CotEditorIcon
+            },
+        ]}
+    />
+
+    {/* Notes */}
+    <ToolSection
+        class='mb-5'
+        title='Notes'
+        tools={[
+            {
+                name: 'Apple Notes',
+                description: '',
+                href: 'https://open.spotify.com/',
+                icon: AppleNotesIcon
+            },
+            {
+                name: 'Notion',
+                description: '',
+                href: 'https://www.notion.com/',
+                icon: import('@/assets/tools/notion.svg?raw')
+            },
+            {
+                name: 'Obsidian',
+                description: '',
+                href: 'https://obsidian.md/',
+                icon: import('@/assets/tools/obsidian.svg?raw')
+            },
+        ]}
+    />
+
+    {/* Productivity */}
+    <ToolSection
+        class='mb-5'
+        title='Productivity'
+        tools={[
+            {
+                name: 'iTerm2',
+                description: '',
+                href: 'https://iterm2.com/',
+                icon: ITerm2Icon
+            },
+            {
+                name: 'Alfred',
+                description: '',
+                href: 'https://www.alfredapp.com/',
+                icon: AlfredIcon
+            },
+            {
+                name: 'EndNote',
+                description: 'Research assistant',
+                href: 'https://endnote.com/',
+                icon: EndNoteIcon
+            },
+            {
+                name: 'Zotero',
+                description: 'Research assistant',
+                href: 'https://zotero.org/',
+                icon: ZoteroIcon
+            },
+            {
+                name: 'Anki',
+                description: 'Remembering everything',
+                href: 'https://apps.ankiweb.net/',
+                icon: AnkiIcon
+            },
+        ]}
+    />
+
+    {/* Music */}
+    <ToolSection
+        class='mb-5'
+        title='Music'
+        tools={[
+            {
+                name: 'AirPods 4 (Active Noise Cancellation, 2024)',
+                description: 'Purchased in May 2025',
+                href: 'https://support.apple.com/en-us/121203',
+                icon: AirPods4Icon
+            },
+            {
+                name: 'Sony WH-1000XM3 (2018)',
+                description: 'Purchased in Oct 2021',
+                href: 'https://www.sony.com.tw/zh/electronics/headband-headphones/wh-1000xm3',
+                icon: WH1000XM3Icon
+            },
+            {
+                name: 'HomePod (2018)',
+                description: 'Purchased in Oct 2019',
+                href: 'https://support.apple.com/en-us/111994',
+                icon: HomePodIcon
+            },
+            {
+                name: 'Spotify',
+                description: '',
+                href: 'https://open.spotify.com/',
+                icon: SpotifyIcon
+            },
+            {
+                name: 'Apple Music',
+                description: '',
+                href: 'https://music.apple.com/',
+                icon: AppleMusicIcon
+            }
+        ]}
+    />
 
   {/* social-networks */}
   <h2 id='social-networks'>Social Networks</h2>
