@@ -4,15 +4,19 @@ import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 
+import ArduinoIcon from '@/assets/tools/arduino.png';
+import CasioIcon from '@/assets/tools/casio.jpeg';
 import RPiIcon from '@/assets/tools/rpi.png';
 import SwitchIcon from '@/assets/tools/switch.png';
+
 import KoboIcon from '@/assets/tools/kobo.png';
+
 import AnkiIcon from '@/assets/tools/anki.png';
+
 import ZoteroIcon from '@/assets/tools/zotero.png';
 import EndNoteIcon from '@/assets/tools/endnote.jpeg';
 import ZSpaceIcon from '@/assets/tools/zspace.webp';
-import SpotifyIcon from '@/assets/tools/spotify.png';
-import AppleMusicIcon from '@/assets/tools/applemusic.png';
+
 import ITerm2Icon from '@/assets/tools/iterm2.png';
 import SkimIcon from '@/assets/tools/skim.png';
 import EudicIcon from '@/assets/tools/eudic.png';
@@ -21,14 +25,30 @@ import VimIcon from '@/assets/tools/vim.gif';
 import CotEditorIcon from '@/assets/tools/coteditor.png';
 import AppleNotesIcon from '@/assets/tools/applenotes.png';
 import AlfredIcon from '@/assets/tools/alfred.png';
+
 import AirPods4Icon from '@/assets/tools/airpods4.png';
 import WH1000XM3Icon from '@/assets/tools/wh-1000xm3.avif';
 import HomePodIcon from '@/assets/tools/homepod.png';
+import SpotifyIcon from '@/assets/tools/spotify.png';
+import AppleMusicIcon from '@/assets/tools/applemusic.png';
+import XYZIcon from '@/assets/tools/xyz.png';
+import LyricsXIcon from '@/assets/tools/lyricsx.png';
+
+import OverleafIcon from '@/assets/tools/overleaf.png';
+
 
 const headings = [
-  { depth: 2, slug: 'tools', text: 'Tools' },
-  { depth: 2, slug: 'social-networks', text: 'Social Networks' },
-  { depth: 2, slug: 'about-blog', text: 'About Blog' }
+    { depth: 2, slug: 'tools', text: 'Tools' },
+        { depth: 3, slug: 'hardware', text: 'Hardware' },
+        { depth: 3, slug: 'listening', text: 'Listening' },
+        { depth: 3, slug: 'reading', text: 'Reading' },
+        { depth: 3, slug: 'editing', text: 'Editing' },
+        { depth: 3, slug: 'writing', text: 'Writing' },
+        { depth: 3, slug: 'others', text: 'Others' },
+    { depth: 2, slug: 'social-networks', text: 'Social Networks' },
+    { depth: 2, slug: 'about-blog', text: 'About Blog' },
+        { depth: 3, slug: 'history', text: 'Website History' },
+        { depth: 3, slug: 'techsupport', text: 'Technical Support' },
 ]
 ---
 
@@ -39,18 +59,30 @@ const headings = [
 
     {/* tools */}
     <h2 id='tools'>Tools</h2>
-    <p>以下是我正在使用的一些工具：</p>
+    <p>My current hardwares, softwares and services as follows:</p>
 
     {/* Hardware */}
+    <h3 id='hardware'>Hardware</h3>
     <ToolSection
         class='mb-5'
-        title='Hardware'
         tools={[
+        {
+            name: "Arduino Mega 2560 Rev3 (2010)",
+            description: "Purchased in Oct 2025",
+            href: 'https://store.arduino.cc/products/arduino-mega-2560-rev3',
+            icon: import('@/assets/tools/arduino.svg?raw')
+        },
         {
             name: "MacBook Pro (14', M4, 2024)",
             description: "24G + 512G, purchased in Jun 2025",
             href: 'https://support.apple.com/en-us/121552',
             icon: import('@/assets/tools/apple.svg?raw')
+        },
+        {
+            name: "Casio fx-999CN CW (2020)",
+            description: "Calculator, Purchased in Jun 2024",
+            href: 'https://www.casio.com.cn/scientific-calculators/product.FX-999CNCW/',
+            icon: CasioIcon
         },
         {
             name: 'Raspberry Pi 5 (2023)',
@@ -76,17 +108,79 @@ const headings = [
             href: 'https://www.nintendo.com/ph/hardware/detail/switch-oled/index.html?modalid=mariored&srsltid=AfmBOoqPPH4zgOHUNh6FhQpG3dS40w4l7WrNM1HmS-t4BgKmS699vs1r',
             icon: SwitchIcon
         },
+        {
+            name: 'Raspberry Pi 3 Model B+ (2018)',
+            description: "Purchased in Jau 2019",
+            href: 'https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/',
+            icon: RPiIcon
+        },
+        ]}
+    />
+
+    {/* Listening */}
+    <h3 id='listening'>Listening</h3>
+    <ToolSection
+        class='mb-5'
+        tools={[
+            {
+                name: 'AirPods 4 (Active Noise Cancellation, 2024)',
+                description: 'Purchased in May 2025',
+                href: 'https://support.apple.com/en-us/121203',
+                icon: AirPods4Icon
+            },
+            {
+                name: 'Sony WH-1000XM3 (2018)',
+                description: 'Purchased in Oct 2021',
+                href: 'https://www.sony.com.tw/zh/electronics/headband-headphones/wh-1000xm3',
+                icon: WH1000XM3Icon
+            },
+            {
+                name: 'HomePod (2018)',
+                description: 'Purchased in Oct 2019',
+                href: 'https://support.apple.com/en-us/111994',
+                icon: HomePodIcon
+            },
+            {
+                name: 'Spotify',
+                description: 'Streaming music',
+                href: 'https://open.spotify.com/',
+                icon: SpotifyIcon
+            },
+            {
+                name: 'Apple Music',
+                description: 'Streaming music',
+                href: 'https://music.apple.com/',
+                icon: AppleMusicIcon
+            },
+            {
+                name: '小宇宙',
+                description: 'Podcasts',
+                href: 'https://www.xiaoyuzhoufm.com/',
+                icon: XYZIcon
+            },
+            {
+                name: 'LyricsX',
+                description: '🎶 Ultimate lyrics app for macOS',
+                href: 'https://github.com/MxIris-LyricsX-Project/LyricsX',
+                icon: LyricsXIcon
+            },
         ]}
     />
 
     {/* Reading */}
+    <h3 id='reading'>Reading</h3>
     <ToolSection
         class='mb-5'
-        title='Reading'
         tools={[
             {
+            name: "Casio EX-Word XD-SX3800WE (2020)",
+            description: "E-Dictionary, urchased in Jun 2024",
+            href: 'https://www.casio.com/jp/exword/product.XD-SX3800WE/',
+            icon: CasioIcon
+            },
+            {
                 name: 'Kobo Clara 2E (2022)',
-                description: "Purchased in Jan 2023",
+                description: "E-Reader, purchased in Jan 2023",
                 href: 'https://gl.kobobooks.com/zh/products/kobo-clara-2e',
                 icon: KoboIcon
             },
@@ -98,19 +192,19 @@ const headings = [
             },
             {
                 name: 'Folo',
-                description: '',
+                description: 'Next-Gen Information Browser',
                 href: 'https://folo.is/',
                 icon: import('@/assets/tools/folo.svg?raw')
             },
             {
                 name: 'Skim',
-                description: '',
+                description: 'PDF reader',
                 href: 'https://skim-app.sourceforge.io/',
                 icon: SkimIcon
             },
             {
                 name: 'PDF Expert',
-                description: '',
+                description: 'PDF reader',
                 href: 'https://pdfexpert.com/',
                 icon: import('@/assets/tools/pdfexpert.svg?raw')
             },
@@ -122,21 +216,21 @@ const headings = [
             },
             {
                 name: 'Eudic',
-                description: '',
+                description: 'Dictionary',
                 href: 'https://www.eudic.net/v4/en/app/eudic',
                 icon: EudicIcon
             },
         ]}
     />
 
-    {/* Editors */}
+    {/* Editing */}
+    <h3 id='editing'>Editing</h3>
     <ToolSection
         class='mb-5'
-        title='Editors'
         tools={[
             {
                 name: 'Vim',
-                description: '',
+                description: 'Text editor',
                 href: 'https://www.vim.org/',
                 icon: VimIcon
             },
@@ -154,17 +248,17 @@ const headings = [
             },
             {
                 name: 'CotEditor',
-                description: '',
+                description: 'Text Editor',
                 href: 'https://coteditor.com/',
                 icon: CotEditorIcon
             },
         ]}
     />
 
-    {/* Notes */}
+    {/* Writing */}
+    <h3 id='notes'>Writing</h3>
     <ToolSection
         class='mb-5'
-        title='Notes'
         tools={[
             {
                 name: 'Apple Notes',
@@ -187,14 +281,14 @@ const headings = [
         ]}
     />
 
-    {/* Productivity */}
+    {/* Others */}
+    <h3 id='others'>Others</h3>
     <ToolSection
         class='mb-5'
-        title='Productivity'
         tools={[
             {
                 name: 'iTerm2',
-                description: '',
+                description: 'Terminal',
                 href: 'https://iterm2.com/',
                 icon: ITerm2Icon
             },
@@ -222,104 +316,68 @@ const headings = [
                 href: 'https://apps.ankiweb.net/',
                 icon: AnkiIcon
             },
+            {
+                name: 'Overleaf',
+                description: 'Online LaTex Editor',
+                href: 'https://www.overleaf.com/project',
+                icon: OverleafIcon
+            },
         ]}
     />
 
-    {/* Music */}
-    <ToolSection
-        class='mb-5'
-        title='Music'
-        tools={[
+    {/* social-networks */}
+    <h2 id='social-networks'>Social Networks</h2>
+    <Substats
+        stats={[
             {
-                name: 'AirPods 4 (Active Noise Cancellation, 2024)',
-                description: 'Purchased in May 2025',
-                href: 'https://support.apple.com/en-us/121203',
-                icon: AirPods4Icon
+                platform: 'GitHub',
+                icon: 'github',
+                link: 'https://github.com/zhuozhiyongde',
+                text: 'followers',
+                api: 'github/abotw'
             },
             {
-                name: 'Sony WH-1000XM3 (2018)',
-                description: 'Purchased in Oct 2021',
-                href: 'https://www.sony.com.tw/zh/electronics/headband-headphones/wh-1000xm3',
-                icon: WH1000XM3Icon
-            },
-            {
-                name: 'HomePod (2018)',
-                description: 'Purchased in Oct 2019',
-                href: 'https://support.apple.com/en-us/111994',
-                icon: HomePodIcon
-            },
-            {
-                name: 'Spotify',
-                description: '',
-                href: 'https://open.spotify.com/',
-                icon: SpotifyIcon
-            },
-            {
-                name: 'Apple Music',
-                description: '',
-                href: 'https://music.apple.com/',
-                icon: AppleMusicIcon
+                platform: 'Bilibili',
+                icon: 'bilibili',
+                color: '#fe7398',
+                link: 'https://space.bilibili.com/3031522',
+                text: 'followers',
+                count: 36
             }
         ]}
     />
 
-  {/* social-networks */}
-  <h2 id='social-networks'>Social Networks</h2>
-  <p>你可以在以下平台找到我：</p>
-  <Substats
-    stats={[
-      {
-        platform: 'GitHub',
-        icon: 'github',
-        link: 'https://github.com/zhuozhiyongde',
-        text: 'followers',
-        api: 'github/abotw'
-      },
-      {
-        platform: 'Bilibili',
-        icon: 'bilibili',
-        color: '#fe7398',
-        link: 'https://space.bilibili.com/3031522',
-        text: 'followers',
-        count: 36
-      }
-    ]}
-  />
+    {/* about-blog */}
+    <h2 id='about-blog'>About Blog</h2>
+    <h3 id='history'>Website history</h3>
+    <Timeline events={
+    [
+        { date: '2025-10-28', content: 'Hello, world!' },
+    ]
+    } />
+    <h3 id='support'>Technial Support</h3>
+    <p>
+        The smooth operation and personalized customization of website also 
+        rely on the resources and technical support provided by 
+        the following excellent projects/service providers:</p>
+    <ul>
+        <li>Site hosting: <a href='https://pages.github.com/' target='_blank'>Github Pages</a></li>
+        <li>
+            Framework & Theme: <a href='https://astro.build/' target='_blank'>Astro</a> + <a
+            href='https://github.com/cworld1/astro-theme-pure'
+            target='_blank'>Astro Theme Pure</a
+            >
+        </li>
+        <li>Comment system: <a href='https://waline.js.org' target='_blank'>Waline</a></li>
+        <li>
+            Analytics: <a
+            href='https://umami.is/'
+            target='_blank'>Umami</a
+            >
+        </li>
+        <li>
+            Other statistics：<a href='https://github.com/spencerwooo/substats' target='_blank'>Substats</a>
+        </li>
+    </ul>
 
-  <h2 id='education'>Education</h2>
-  <Timeline
-    events={[
-      {
-        date: '2024-09-01',
-        content: '<a href="https://www.hfuu.edu.cn/"target="_blank">合肥大学</a>'
-      },
-      {
-        date: '2021-09-01',
-        content: '<a href="https://www.whit.edu.cn/"target="_blank">芜湖职业技术大学</a>'
-      }
-    ]}
-  />
-
-  {/* about-blog */}
-  <h2 id='about-blog'>About Blog</h2>
-  <p>本站基于以下项目/服务提供商的资源和技术支持：</p>
-  <ul>
-    <li>托管: <a href='https://pages.github.com/' target='_blank'>Github Pages</a></li>
-    <li>
-      框架 & 主题: <a href='https://astro.build/' target='_blank'>Astro</a> + <a
-        href='https://github.com/cworld1/astro-theme-pure'
-        target='_blank'>Astro Theme Pure</a
-      >
-    </li>
-    <li>评论系统：<a href='https://waline.js.org' target='_blank'>Waline</a></li>
-    <li>
-      访问量统计：<a href='https://waline.js.org/' target='_blank'>Waline</a> + <a
-        href='https://umami.is/'
-        target='_blank'>Umami</a
-      >
-    </li>
-    <li>
-      粉丝数统计：<a href='https://github.com/spencerwooo/substats' target='_blank'>Substats</a>
-    </li>
-  </ul>
 </PageLayout>
