@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets'
+
+import { Button, Collapse, Icon } from 'astro-pure/user'
+import PageLayout from '@/layouts/CommonPage.astro'
+import ProjectSection from '@/components/projects/ProjectSection.astro'
+
+const headings = [
+  { depth: 2, slug: 'learnings', text: 'Learnings' },
+]
+---
+
+<PageLayout title='Projects' {headings}>
+  <p>Github Activities:</p>
+  <p>
+    <Image
+      src='https://ghchart.rshah.org/659eb9/abotw'
+      alt='github activities'
+      inferSize
+      loading='lazy'
+    />
+  </p>
+
+  <h2 id='learnings'>Learnings</h2>
+  <ProjectSection
+    class='my-2'
+    projects={[
+      {
+        name: 'EE201 MCU',
+        description: 'Fall 2025',
+        links: [{ type: 'github', href: 'https://abotw.github.io/EE201-MCU-CourseSite/' }]
+      },
+      {
+        name: 'EN902-IELTS',
+        description: 'Fall 2025',
+        links: [
+          {
+            type: 'github',
+            href: 'https://abotw.github.io/EN902-IELTS-DocSite/'
+          }
+        ]
+      }
+    ]}
+  />
+
+</PageLayout>
+
+<style>
+  .sponsorship-card {
+    & .sponsorship-card-img {
+      opacity: 0.3;
+      --un-blur: blur(4px);
+      filter: var(--un-blur);
+    }
+
+    &:hover {
+      & .sponsorship-card-icon {
+        opacity: 0;
+      }
+      & .sponsorship-card-img {
+        opacity: 1;
+        --un-blur: blur(0);
+      }
+    }
+  }
+</style>
