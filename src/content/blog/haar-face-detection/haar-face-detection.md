@@ -1,10 +1,8 @@
 ---
-title: 基于Haar级联分类器的人脸识别
-description: 使用 Python 和 OpenCV 快速实现人脸识别。详细介绍了如何利用 Haar 级联分类器来检测图像中的人脸，并使用 Matplotlib 在 Jupyter Lab 环境中展示结果。
+title: 基于Haar级联分类器的人脸检测
+description: 使用 Python 和 OpenCV 快速实现人脸检测。详细介绍了如何利用 Haar 级联分类器来检测图像中的人脸，并使用 Matplotlib 展示结果。
 publishDate: 2025-12-05
 ---
-
-# 基于Haar级联分类器的人脸识别
 
 人脸检测是计算机视觉的入门砖。
 
@@ -13,16 +11,16 @@ publishDate: 2025-12-05
 -   libs
     -   opencv-python
     -   matplotlib
--   `haarcascade_frontalface_default.xml`
-    -   核心是 OpenCV 提供的 **Haar 级联分类器**。它是一种高效的目标检测方法，依赖于预先训练好的 XML 文件来识别图像中的人脸特征。
+-   [`haarcascade_frontalface_default.xml`](https://github.com/opencv/opencv/blob/4.x/data/haarcascades/haarcascade_frontalface_default.xml)
+    -   本文中人脸检测的核心是 OpenCV 提供的 **Haar 级联分类器**。这是一种高效的目标检测方法，依赖于预先训练好的 XML 文件来识别图像中的人脸特征。
 
-## 2. 人脸检测与可视化
+## 2. 人脸检测和可视化
 
 ![faces](./assets/faces.jpg)
 
-（[图片来源](https://www.tomshardware.com/software/operating-systems/long-time-rivals-bill-gates-and-linus-torvalds-meet-for-the-first-time-have-dinner-no-major-kernel-decisions-were-made-but-maybe-next-dinner)）
+(Image credit: Mark Russinovich on LinkedIn. [Source](https://www.tomshardware.com/software/operating-systems/long-time-rivals-bill-gates-and-linus-torvalds-meet-for-the-first-time-have-dinner-no-major-kernel-decisions-were-made-but-maybe-next-dinner).)
 
-下述脚本使用 OpenCV，首先将图像加载为灰度图进行检测，并在彩色图像上绘制矩形，最后使用 Matplotlib 显示结果。
+脚本使用 OpenCV，首先将图像加载为灰度图进行检测，并在彩色图像上绘制矩形，最后使用 Matplotlib 显示结果。
 
 ```python
 import cv2
@@ -76,8 +74,8 @@ plt.show()
 
 ## 3. 备注
 
-1.   OpenCV 读取图像的默认颜色顺序是 BGR，而 Matplotlib 期望的是 RGB。
+1.   OpenCV 读取图像的默认颜色顺序是 BGR，而 Matplotlib 则是 RGB。
 2.   `detectMultiScale` 是检测的核心。
 
 -   `scaleFactor`: 越小，检测越精细，但速度越慢。
--   `minNeighbors`: 越大，假阳性越少（误报越少），但可能漏掉一些人脸。
+-   `minNeighbors`: 越大，误报越少，但可能漏掉一些人脸。
