@@ -64,5 +64,3 @@ detect_faces_dlib("stefanie-sun.jpg")
 ```
 
 ![dlib-face-detection](./assets/dlib-face-detection.png)
-
-检测效果似乎没有那么完美，怎么没有检测出来燕姿女士在左下角的美丽侧脸呢🤷？
