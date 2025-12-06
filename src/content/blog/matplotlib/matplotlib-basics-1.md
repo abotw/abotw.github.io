@@ -6,6 +6,8 @@ publishDate: 2025-12-06
 
 Matplotlib 是用 Python 制作图表的重要工具库。本文从 Matplotlib 的核心概念和最常用的接口 **`pyplot`** 模块入手，以掌握基础绘图的技能。
 
+-   [https://matplotlib.org/cheatsheets/](https://matplotlib.org/cheatsheets/)
+
 ## 1. Matplotlib 是什么？
 
 **Matplotlib** 是一个强大的 **Python 2D 绘图库**，它可以生成各种硬拷贝（如 PNG, PDF, SVG），也可以在跨平台交互式环境（如 Jupyter Notebook）中生成高质量图形。
