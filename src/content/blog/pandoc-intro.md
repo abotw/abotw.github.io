@@ -88,3 +88,5 @@ pandoc input.md -o output.docx --reference-doc=custom_ref.docx
 ```
 
 这样，`output.docx` 就会继承 `custom_ref.docx` 的所有样式设置。
+
+最后，[pandoc_word_template](https://github.com/Achuan-2/pandoc_word_template)，这个项目里有一些 Word 中文模板可供使用。
