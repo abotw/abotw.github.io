@@ -75,10 +75,8 @@ if __name__ == "__main__":
     process_hand_convex_hull('hand.avif')
 ```
 
-
-​    
 ![png](assets/cv2-threshold-convexhull-contour_1_0.png)
-​    
+​ （[图片来源](https://unsplash.com/photos/a-hand-with-a-black-background-AuYlpcx8piI))
 
 
 ## 1. 阈值处理：非黑即白的二分法
@@ -127,3 +125,7 @@ hull = [cv2.convexHull(c) for c in contours]
   * **红色线条**：包裹整个手部的多边形（凸包）。
 
 通过对比两者，可以清晰地看到算法是如何忽略手指间的凹陷，从而获得手部整体的几何外形的。
+
+## References
+
+-   [How to Detect Hands with OpenCv Python Convex Hull | Traktion.io](https://www.youtube.com/watch?v=Jv4pB3nw9ss)
