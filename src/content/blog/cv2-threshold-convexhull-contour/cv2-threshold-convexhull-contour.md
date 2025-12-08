@@ -1,8 +1,8 @@
-```
+---
 title: 手部轮廓与凸包检测
 description: 使用 OpenCV 进行图像二值化、轮廓提取以及利用“橡皮筋原理”计算凸包的相关实现。
 publishDate: 2025-12-08
-```
+---
 
 在计算机视觉的手势识别、物体抓取等任务中，准确地提取目标轮廓是至关重要的第一步。下面通过一段简短的 Python 代码，来拆解 OpenCV 中三个非常基础但强大的概念：
 
@@ -76,7 +76,8 @@ if __name__ == "__main__":
 ```
 
 ![png](assets/cv2-threshold-convexhull-contour_1_0.png)
-​ （[图片来源](https://unsplash.com/photos/a-hand-with-a-black-background-AuYlpcx8piI))
+
+（[图片来源](https://unsplash.com/photos/a-hand-with-a-black-background-AuYlpcx8piI))
 
 
 ## 1. 阈值处理：非黑即白的二分法
