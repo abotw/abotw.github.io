@@ -124,7 +124,7 @@ cv2.imwrite('3-after-rotation.jpg', img_rotated)
 
 ![3-after-rotation](./assets/3-after-rotation.jpg)
 
-### 3. 终极奥义：三点法 (Three Points)
+### 3.3 终极奥义：三点法 (Three Points)
 
 这是仿射变换最强大的地方。
 
